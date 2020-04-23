@@ -9,6 +9,7 @@
 body{
     
     font-family: roboto;
+    position: relative;
 
 }
 
@@ -91,7 +92,6 @@ header img{
 }
 
 .cards{
-    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
@@ -124,6 +124,34 @@ header img{
     color: #777777;
 }
 
+.card:hover{
+    cursor: pointer;
+}
+
+/*=== ABOUT PAGE ==*/
+
+#about{
+    max-width: 940px;
+    margin: 50px auto;
+}
+
+#about h1{
+    margin-bottom: 20px;
+}
+#about h2{
+    margin-top: 30px;
+}
+
+#about p{
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+
+    margin-top: 20px;
+}
+
+
+
 /*===FOOTER===*/
 
 footer{
@@ -141,4 +169,78 @@ footer{
 
     justify-content: center;
     align-items: center;
+}
+
+
+/*===MODAL===*/
+
+.modal-overlay{
+    position: fixed;
+
+    background: rgba(0, 0, 0, 0.329);
+    top: 0;
+   
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+   
+}
+
+.modal{
+    background-color: white;
+
+    width: 660px;
+    height: 413px;
+
+    text-align: center;
+
+    border-radius: 16px;
+}
+
+.modal-img img{
+    border-radius: 15px;
+    margin: 30px;
+
+    width: 600px;
+    height: 200px;
+
+    
+}
+
+.modal-texts h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.modal-texts p{
+    font-size: 18px;
+    color: #777777;
+}
+
+.close-modal{
+    margin-top: 60px;
+}
+.close-modal a{
+    font-size: 16px;
+    color: #999999;
+}
+
+.close-modal a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/*== ACTIVE MODAL ==*/
+
+.active{
+    opacity: 1;
+    visibility: visible;
 }
