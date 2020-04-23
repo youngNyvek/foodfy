@@ -1,2 +1,2 @@
 # foody
- site de receitas criado afim de cumprir do desafio do modulo 4 da launchbase rocketseat
+ site de receitas criado afim de cumprir do desafio do modulo 2 da launchbase rocketseat
