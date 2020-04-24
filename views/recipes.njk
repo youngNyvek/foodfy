@@ -1,0 +1,27 @@
+    {% extends "layout.njk" %}
+    
+    {% block content %}
+
+    <section class="cards">
+       
+       {% for card in cards %}
+       
+        <div class="card" id= "{{ card.id }}" >
+            <div class="card-img">
+                 <img src="{{ card.image }}" alt="Receita">
+            </div>
+
+            <div class="card-texts">
+                 <h3>{{ card.title }}</h3>
+                 <p>{{ card.author }}</p>
+            </div>
+        </div>
+
+     {% endfor %}
+        
+    </section>
+
+    {%include "modal.njk"%}
+
+    {%endblock content%}
+  
