@@ -54,6 +54,11 @@ function addStep(){
   
 }
 
+function del(){
+    const edit = document.querySelector("#edit")
+
+    edit.querySelector("form").action = "/admin/recipes?_method=DELETE"
+}
 
 buttonShow[0].addEventListener("click", function(){
 

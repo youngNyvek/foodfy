@@ -1,4 +1,5 @@
-const recipes = require("../data")
+const data = require("../data.json")
+const recipes = data.recipes
 
 
 exports.index = function(req, res){

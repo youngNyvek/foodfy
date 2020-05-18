@@ -320,7 +320,7 @@ div.banner img{
     cursor: pointer;
 }
 
-.recipe-img{
+.recipe-img, .recipe-title-form, .recipe-author-form{
     margin-bottom: 30px;
 }
 
@@ -374,3 +374,42 @@ div.banner img{
 
 
 
+/*EDIT*/
+
+.header-form-edit{
+    display: flex;
+    margin-bottom: 30px;
+}
+.header-form-edit button{
+    margin-left: 420px;
+
+    background: rgb(195, 88, 88);
+    border-radius: 4px;
+    border: none;
+
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+
+    width: 100px;
+    height: 37px;
+
+    cursor: pointer;
+}
+
+.header-form-edit button:nth-child(3){
+    margin-left: 10px;
+
+    background: #6558C3;
+    border-radius: 4px;
+    border: none;
+
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+
+    width: 150px;
+    height: 37px;
+
+    cursor: pointer;
+}
