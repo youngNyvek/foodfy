@@ -1,0 +1,33 @@
+{% extends "layout-adm.njk" %}
+
+{% block content %}
+
+<div class="create-recipe">
+    <form action="/admin/chefs" method="POST">
+   
+    <div class="header-form">
+        <h1>Cadastrando chef</h1>
+        <button type="submit">Salvar chef</button>
+    </div>
+    
+    <div class="recipe-title-form">
+        <p>Nome</p>
+        
+        <input type="text" name="name" >
+
+    </div>
+
+    <div class="recipe-img">
+        <p>Avatar</p>
+
+        <input type="url" name="avatar_url">
+    
+    </div>
+
+
+</div>
+
+
+</form>
+
+{% endblock content %}

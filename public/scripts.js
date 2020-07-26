@@ -60,6 +60,12 @@ function del(){
     edit.querySelector("form").action = "/admin/recipes?_method=DELETE"
 }
 
+function del2(){
+    const edit = document.querySelector("#edit")
+
+    edit.querySelector("form").action = "/admin/chefs?_method=DELETE"
+}
+
 buttonShow[0].addEventListener("click", function(){
 
     const show = document.querySelectorAll(".recipe-list")[0]

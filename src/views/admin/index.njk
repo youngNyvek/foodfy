@@ -1,0 +1,36 @@
+    {% extends "layout-adm.njk" %}
+    
+    {% block content %}
+
+<div class="adm-div">
+
+     <h1>Gerenciar receitas</h1>
+
+    <section class="cards">
+       
+       {% for card in cards %}
+       
+        <div class="card-adm" id= "{{ card.id }}" >
+            <div class="card-img">
+                 <img src="{{ card.image }}" alt="Receita">
+            </div>
+
+            <div class="card-texts">
+                 <h3>{{ card.title }}</h3>
+                 <p>por {{ card.chef_name }}</p>
+            </div>
+
+            <div class="goto-recipe">
+                <a>Visualizar</a>
+            </div>
+        </div>
+
+     {% endfor %}
+        
+    </section>
+
+    
+</div>
+
+    {%endblock content%}
+  

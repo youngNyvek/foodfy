@@ -270,6 +270,9 @@ div.banner img{
     margin-left: 231px;
 }
 
+#h-admin nav li {
+    width: 100px;
+}
 .adm-div {
     max-width: 940px;
 
@@ -279,6 +282,7 @@ div.banner img{
 .adm-recipe-title{
     display: flex;
     max-width: 940px;
+    justify-content: space-between;
     margin: 50px auto;
 }
 
@@ -295,16 +299,50 @@ div.banner img{
 
     border-radius: 6px;
 }
+/*INDEX ADM*/
+.card-adm img {
+    width: 172px;
+    height: 80px;
+}
 
+.goto-recipe a {
+    font-family: Roboto;
+    font-size: 14px;
+    color: #6558C3;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-adm .card-img {
+    grid-row: 1/3;
+}
+
+.card-adm {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+
+
+}
+
+.adm-div .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px;
+
+    max-width: 940px;
+    margin: 20px auto;
+}
 
 /*CREATE*/
 .header-form{
     display: flex;
     margin-bottom: 30px;
+    justify-content: space-between;
 }
 
 .header-form button{
-    margin-left: 560px;
+
 
     background: #6558C3;
     border-radius: 4px;
@@ -322,6 +360,18 @@ div.banner img{
 
 .recipe-img, .recipe-title-form, .recipe-author-form{
     margin-bottom: 30px;
+}
+
+.recipe-author-form select {
+    width: 100%;
+    height: 49px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    border-radius: 4px;
+    font-family: roboto;
+    font-weight: bold;
+    color: rgb(155, 155, 155);
 }
 
 .create-recipe{
@@ -374,6 +424,7 @@ div.banner img{
 
 
 
+
 /*EDIT*/
 
 .header-form-edit{
@@ -412,4 +463,114 @@ div.banner img{
     height: 37px;
 
     cursor: pointer;
+}
+
+
+/* CHEF ADM */
+.chefs-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 30px;
+}
+
+.chef-card{
+    display: grid;
+    grid-template-columns: 84px 1fr;
+}
+.chef-image{
+    grid-row: 1 / 3;
+}
+.chef-image img{
+    width: 64px;
+    height: 64px;
+
+    border-radius: 100%;
+}
+
+.chef-name {
+    align-self: center;
+}
+
+.chef-name p {
+    font-family: Roboto;
+    font-size: 18px;
+}
+
+.goto-chef a{
+    font-family: Roboto;
+    font-size: 14px;
+    color: #6558C3;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* SHOW ADM */
+
+
+.avatar_url{
+    max-width: 960px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar_url img {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100%;
+}
+
+.chef-title {
+    max-width: 960px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.chef-title h1 {
+    font-family: Roboto;
+    font-size: 36px;
+
+    font-weight: 700;
+}
+
+.chef-title p {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #777777;
+}
+
+.chef-recipes {
+    max-width: 960px;
+    margin: 30px auto;
+}
+
+.grid-recipes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin-top: 30px;
+}
+
+.recipes-of-chef{
+    display: grid;
+    grid-template-columns: 192px 1fr;
+}
+
+.image-recipe-chef img{
+    width: 172px;
+    height: 80px;
+    border-radius: 15px;
+}
+
+.image-recipe-chef {
+    grid-row: 1/4;
 }

@@ -1,0 +1,50 @@
+{% extends "layout-adm.njk" %}
+
+{% block content %}
+
+<div class="create-recipe" id="edit">
+    
+    <form action="/admin/chefs?_method=PUT" method="POST">
+   
+    <div class="header-form-edit">
+        <h1>Editando chef</h1>
+    
+        
+        <button type="submit" onclick="del2()">Deletar</button>
+        
+        <button type="submit" >Salvar receita</button>
+    </div>
+
+        
+    <div class="recipe-title-form">
+            <p>Nome</p>
+
+            <div class="ingredient">
+                <input 
+                    type="text" 
+                    name="name" 
+                    value="{{chef.name}}">
+            </div>
+
+    </div>
+
+    <div class="recipe-img">
+            <p>Avatar</p>
+            <input 
+                type="url" 
+                name="avatar_url"
+                value="{{chef.avatar_url}}">
+
+    </div>
+
+
+        
+        <input type="hidden" name="id" value="{{chef.id}}">
+
+    </form> 
+</div>
+
+
+
+
+{% endblock content %}

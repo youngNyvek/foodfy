@@ -1,0 +1,54 @@
+{% extends "layout-adm.njk" %}
+
+{% block content %}
+
+<div class="adm-recipe-title">
+    <h3>Chef:{{chef.name}}</h3>
+    <a id="edit-button" href="{{chef.id}}/edit">Editar Receita</a>
+</div>
+
+<div class="avatar_url">
+ <img src="{{chef.avatar_url}}" alt="">
+</div>
+
+<div class="chef-title">
+        <h1>{{chef.name}}</h1>
+        <p>{{recipe.qnt}} receitas</p>
+
+</div>
+
+<div class="chef-recipes">
+        <h2>Receitas</h2>
+
+        <div class="grid-recipes">
+
+            {% for recipe in recipes %}
+
+            <div class="recipes-of-chef">
+                <div class="image-recipe-chef">
+                    <img src="{{recipe.image}}" alt="">
+                </div>
+                <div class="title-recipe-chef">
+                    <h2>{{recipe.title}} </h2>
+                </div>
+                <div class="recipe-chef">
+                    <p>por {{chef.name}}</p>
+                </div>
+                <div class="goto-chef">
+                    <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+            
+
+        </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}
