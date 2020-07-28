@@ -1,7 +1,7 @@
 const recipe = require("../models/recipe")
 
 exports.index = function (req, res){
-
+    
     recipe.all( (recipes) => {
         res.render("admin/index", {cards:recipes})
     })  

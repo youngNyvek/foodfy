@@ -7,16 +7,22 @@
     <title>Foody</title>
 </head>
 <body>
+    
+    {% block header %}
+    
+
     <header>
     
-        <a href="/"><img src="" alt="Logo do Site"></a>
+       <a href="/"> <img src="/materials/logo.png" alt="Logo do Site" ></a>
         
         <nav>
              <li><a href="/about">Sobre</a></li>
              <li><a href="/recipes">Receitas</a></li>
+             <li><a href="/chefs">Chefs</a></li>
         </nav>
 
     </header>
+    {% endblock header %}
 
     {% block content %}
     {% endblock content %}

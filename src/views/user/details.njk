@@ -1,5 +1,6 @@
 {% extends "layout.njk" %}
 
+
 {% block content %}
 
 <div class="banner">
@@ -8,7 +9,7 @@
 
 <div class="recipe-title">
         <h1>{{recipe.title}}</h1>
-        <p>{{recipe.author}}</p>
+        <p>por {{chef.name}}</p>
 </div>
 
 <section class="details">
@@ -60,8 +61,6 @@
     </div>
 
 </section>
-
-<script src="/scripts.js"></script>
 
 
 {% endblock content %}

@@ -42,6 +42,39 @@ header img{
 }
 
 
+.form-filter {
+
+margin-left: 300px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+
+gap: 5px;
+
+}
+
+.form-filter input{
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.form-filter button{
+    background: #6558C3;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+
+    color: white;
+    padding: 9px 20px;
+
+}
+
+.search-for{
+    max-width: 940px;
+    margin: 0 auto;
+}
+
 .banner{
     background: #FBDFDB;
     display:flex;
@@ -256,7 +289,7 @@ div.banner img{
 #h-admin {
     background-color: black;
     max-width: 100%;
-    width: 100%;
+    
     margin: 0 ; 
     height: 80px;
 

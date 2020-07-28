@@ -10,6 +10,8 @@ routes.get("/", user.index)
 routes.get("/about", user.about)
 routes.get("/recipes", user.recipes)
 routes.get("/recipes/:index", user.recipe)
+routes.get("/chefs", user.chefs)
+
 
 
 routes.get("/admin/recipes", recipes.index)

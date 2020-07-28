@@ -1,9 +1,11 @@
 const chef = require("../models/chef")
+const recipe = require("../models/recipe")
 
 exports.index = function (req, res){
 
     chef.all( (chefs) => {
         res.render("admin/chefs-index", {cards:chefs})
+     
     })  
 
 }
@@ -73,8 +75,19 @@ exports.put = function(req,res){
 
 exports.delete = function(req,res){
 
-    chef.delete(req.body.id, () => {
-        return res.redirect(`/admin/chefs`)
+    chef.countRecipe(req.body.id, (count) => {
+        
+       if(!count){
+    
+        chef.delete(req.body.id, () => {
+            return res.redirect(`/admin/chefs`)
+       })
+         
+       }else{
+            res.send("[ERRO] Não é possivel deletar esse chef, pois receitas estão associadas a seu nome")
+       }
+        
+        
     })
 
 }

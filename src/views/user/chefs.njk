@@ -1,0 +1,32 @@
+    {% extends "layout.njk" %}
+    
+    {% block content %}
+
+<div class="adm-div">
+
+    <section class="chefs-cards">
+
+        {% for card in cards %}
+       
+        <div class="chef-card">
+
+            <div class="chef-image">
+                <img src="{{card.avatar_url}}" alt="foto do chef" >
+            </div>
+            <div class="chef-name">
+                <p>{{card.name}} aaa</p>
+            </div>
+            <div class="goto-chef">
+                <a href="chefs/{{card.id}}">Visualizar</a>
+            </div>
+
+        </div>
+    
+        {% endfor %}
+    </section>
+
+    
+</div>
+
+    {%endblock content%}
+  

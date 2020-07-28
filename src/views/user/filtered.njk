@@ -1,8 +1,7 @@
     {% extends "layout.njk" %}
-    
+
     {% block header %}
     
-
     <header>
     
        <a href="/"> <img src="/materials/logo.png" alt="Logo do Site" ></a>
@@ -22,42 +21,32 @@
 
     </header>
     {% endblock header %}
-    
+
     {% block content %}
-    
-    <section class="banner">
-        <div>
-        <h1>As melhores receitas</h1>
-        <p>
-            Aprenda a construir os melhores pratos
-            com receitas criadas por profissionais
-            do mundo inteiro.
-        </p>
-        </div>
-        <a href="/admin/recipes"><img src="materials/chef.png" alt="Mascote do Site"></a>
-    </section>
 
-    <div class="most-accessed">
-    <h1>Mais acessadas</h1>
+    <div class="search-for">
+   
+    <h1>Buscando por "{{filter}}"</h1>
+    <h2> {{notFound}}</h2>
+
     </div>
-
     <section class="cards">
        
        {% for card in cards %}
        
-        <div class="card" id= "{{ card.id }}">
+        <div class="card" id= "{{ card.id }}" >
             <div class="card-img">
                  <img src="{{ card.image }}" alt="Receita">
             </div>
 
             <div class="card-texts">
                  <h3>{{ card.title }}</h3>
-                 <p>por {{ card.chef_name }}</p>
+                 <p>{{ card.chef_name }}</p>
             </div>
         </div>
 
      {% endfor %}
-      
+        
     </section>
 
-    {% endblock content %}
+    {%endblock content%}
