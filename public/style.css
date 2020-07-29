@@ -283,6 +283,12 @@ div.banner img{
    
 }
 
+/*PAGINA LIST ADM */
+
+.chefs-cards .card-texts {
+    margin: 0;
+}
+
 
 /*ADMIN*/
 
@@ -503,7 +509,7 @@ div.banner img{
 .chefs-cards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
+    gap: 10px;
     margin-top: 30px;
 }
 

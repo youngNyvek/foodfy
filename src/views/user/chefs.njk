@@ -14,10 +14,13 @@
                 <img src="{{card.avatar_url}}" alt="foto do chef" >
             </div>
             <div class="chef-name">
-                <p>{{card.name}} aaa</p>
+                <p>{{card.name}}</p>
             </div>
-            <div class="goto-chef">
-                <a href="chefs/{{card.id}}">Visualizar</a>
+            <div class="card-texts">
+              <p>
+                {% set items =  [card.total_recipes, " receitas"] %}
+                {{ "Nenhuma receita" if card.total_recipes == 0 else items | join  }}
+              </p>
             </div>
 
         </div>

@@ -4,6 +4,7 @@ const chef = require("../models/chef")
 exports.chefs = function (req, res) {
 
     chef.all( (chefs) => {
+
         res.render("user/chefs", {cards:chefs})
     })  
 },

@@ -49,9 +49,11 @@ exports.post = function(req,res){
 
     const keys = Object.keys(req.body)
 
-    for(let key of keys ){
-        if (req.body[key] == "") return res.send("[ERRO] Preencha todos os campos")
+
+    for (let i = 0; i < 5; i++ ){
+        if (req.body[keys[i]] == "") return res.send("[ERRO] Preencha todos os campos")
     }
+
 
     recipe.create(req.body, (recipe) => {
         return res.redirect(`/recipes/${recipe.id}`)
@@ -62,8 +64,8 @@ exports.post = function(req,res){
 exports.put = function(req,res){
     const keys = Object.keys(req.body)
 
-    for(let key of keys ){
-        if (req.body[key] == "") return res.send("[ERRO] Preencha todos os campos")
+    for (let i = 0; i < 5; i++ ){
+        if (req.body[keys[i]] == "") return res.send("[ERRO] Preencha todos os campos")
     }
 
     recipe.update(req.body, () => {
